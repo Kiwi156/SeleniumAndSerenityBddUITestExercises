@@ -1,4 +1,4 @@
-package pageobjects;
+package starter.seleniumeasy.pageobjects;
 
 import net.serenitybdd.annotations.WhenPageOpens;
 import net.serenitybdd.core.pages.PageObject;

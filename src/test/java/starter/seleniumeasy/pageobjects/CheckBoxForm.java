@@ -1,4 +1,4 @@
-package pageobjects;
+package starter.seleniumeasy.pageobjects;
 
 import net.serenitybdd.annotations.DefaultUrl;
 
@@ -11,4 +11,13 @@ public class CheckBoxForm extends SeleniumEasyForm {
     public String ageText() {
         return $("#txtAge").getText();
     }
+
+    public boolean optionIsCheckedFor(String option) {
+       return  $("//label[contains(.,'{0}')]/input", option).isSelected();
+    }
+
+    public void checkAll() {
+        $("//input[@value='Check All']").click();
+    }
 }
+
