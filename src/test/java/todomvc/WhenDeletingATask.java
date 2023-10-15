@@ -14,7 +14,7 @@ import java.util.List;
 @ExtendWith(SerenityJUnit5Extension.class)
 public class WhenDeletingATask {
 
-    @Managed(driver = "chrome", uniqueSession = true)
+    @Managed(driver = "chrome")
     WebDriver driver;
 
     @Steps

@@ -16,7 +16,7 @@ import todomvc.actions.TextField;
 
 @ExtendWith(SerenityJUnit5Extension.class)
 public class WhenAddingTasks {
-    @Managed(driver = "chrome", uniqueSession = true)
+    @Managed(driver = "chrome")
     WebDriver driver;
 
     @Steps
