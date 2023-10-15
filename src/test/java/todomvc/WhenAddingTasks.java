@@ -2,9 +2,8 @@ package todomvc;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-import io.cucumber.java.Before;
 import net.serenitybdd.annotations.Managed;
-
+import org.junit.jupiter.api.BeforeEach;
 import net.serenitybdd.annotations.Steps;
 import net.serenitybdd.junit5.SerenityJUnit5Extension;
 
@@ -23,25 +22,21 @@ public class WhenAddingTasks {
     @Steps
     TextField textField;
 
-  //  @Before
-  //  public void openApplication(){
-    //    textField.openApplication();
-   // }
+    @BeforeEach
+    public void openApp() {
+        textField.openApplication();
+    }
 
     @Test
     public void addingASingleTask(){
 
-        textField.openApplication();
-
         textField.addItem("Pick up groceries");
 
-        assertThat(textField.items()).contains("Pick up groceries");
+        assertThat(textField.items()).containsExactly("Pick up groceries");
 
     }
     @Test
     public void addingMultipleTasks(){
-
-        textField.openApplication();
 
         textField.addItems("Fold the laundry","Make Brunch");
 

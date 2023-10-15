@@ -1,5 +1,6 @@
 package starter.seleniumeasy;
 import net.serenitybdd.annotations.Steps;
+import net.serenitybdd.core.Serenity;
 import net.serenitybdd.junit5.SerenityJUnit5Extension;
 
 import org.junit.jupiter.api.Test;
@@ -34,17 +35,19 @@ public class WhenInteractingWithInputForms {
 
     SingleInputFieldForm singleInputFieldForm;
     @Test
-    public void basicForm(){
+    public void basicForm() {
 
-    navigate.to(FormPage.SingleInputFieldForm);
+        navigate.to(FormPage.SingleInputFieldForm);
 
-    singleInputFieldForm.enterMessage("Hi there");
+        singleInputFieldForm.enterMessage("Hi there");
 
-    singleInputFieldForm.showMessage();
+        singleInputFieldForm.showMessage();
 
-    assertThat(singleInputFieldForm.displayedMessage()).isEqualTo("Hi there");
-
+        Serenity.reportThat("The form display's the correct message",
+                () -> assertThat(singleInputFieldForm.displayedMessage()).isEqualTo("Hi there")
+        );
     }
+
 
     /**
      * Basic form fields (part 2)

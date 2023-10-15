@@ -16,6 +16,8 @@ public class TextField extends UIInteractions {
         return $$(".todo-list label").texts();
     }
 
+
+
     @Step("Open the application")
     public void openApplication() {
         openUrl("https://todomvc.com/examples/angularjs_require/");
@@ -29,16 +31,23 @@ public class TextField extends UIInteractions {
         }
     }
 
-    @Step("Complete item {0}")
+    @Step("Complete item {0} and {1}")
     public void completeAItem(String item) {
         $("//label[.='{0}']/preceding-sibling::input[@type='checkbox']",item).click();
     }
 
-    @Step("Filter by {0}")
+    @Step("Filter by {0} and {1}")
     public void filterBy(String filterName) {
         $("//ul[@class='filters']//a[.='{0}']", filterName).click();
     }
-}
+    @Step("Delete item {0}")
+    public void deleteAnItem(String item) {
+       $("//label[.='{0}']",item).click();
+       $("//label[.='{0}']//following-sibling::button[@class='destroy']",item).click();
+    }
+
+    }
+
 
 
 

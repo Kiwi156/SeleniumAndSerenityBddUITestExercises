@@ -1,6 +1,5 @@
 package starter.seleniumeasy.pageobjects;
 
-import net.serenitybdd.core.pages.ResolvableElement;
 import org.openqa.selenium.By;
 
 public class FormButton {
