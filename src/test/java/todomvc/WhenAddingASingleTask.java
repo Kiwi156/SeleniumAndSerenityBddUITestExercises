@@ -15,7 +15,7 @@ import todomvc.actions.TextField;
 
 
 @ExtendWith(SerenityJUnit5Extension.class)
-public class WhenAddingTasks {
+public class WhenAddingASingleTask {
     @Managed(driver = "chrome")
     WebDriver driver;
 
@@ -34,12 +34,5 @@ public class WhenAddingTasks {
 
         assertThat(textField.items()).containsExactly("Pick up groceries");
 
-    }
-    @Test
-    public void addingMultipleTasks(){
-
-        textField.addItems("Fold the laundry","Make Brunch");
-
-        assertThat(textField.items()).contains("Fold the laundry","Make Brunch");
     }
 }
