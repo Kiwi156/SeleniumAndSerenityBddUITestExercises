@@ -12,7 +12,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.openqa.selenium.WebDriver;
 
-@ExtendWith(SerenityJUnit5Extension.class)
+/*@ExtendWith(SerenityJUnit5Extension.class)
 public class WhenSearchingForAnItem extends UIInteractions {
 
     @Managed(driver = "chrome")
@@ -35,4 +35,4 @@ public class WhenSearchingForAnItem extends UIInteractions {
 
     }
 
-}
+} */

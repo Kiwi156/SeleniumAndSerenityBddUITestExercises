@@ -24,12 +24,20 @@ public class TextField extends UIInteractions {
     }
 
 
-    public void addItems(String... items) {
+  //  public void addItems(String... items) {
+    //    for (String item : items) {
+      //      addItem(item);
+
+       // }
+    public void addItems(String...items){
         for (String item : items) {
             addItem(item);
 
         }
-    }
+            
+        }
+
+
 
     @Step("Complete item {0} and {1}")
     public void completeAItem(String item) {
