@@ -1,12 +1,13 @@
-package newworld;
+package paknsave;
 
+import static org.assertj.core.api.Assertions.assertThat;
 import net.serenitybdd.annotations.Managed;
 import net.serenitybdd.junit5.SerenityJUnit5Extension;
-import newworld.actions.SearchingActions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.openqa.selenium.WebDriver;
-import static org.assertj.core.api.Assertions.assertThat;
+
+import paknsave.actions.SearchingActions;
 
 @ExtendWith(SerenityJUnit5Extension.class)
 public class WhenAddingASingleItem {
@@ -16,15 +17,14 @@ public class WhenAddingASingleItem {
 
     SearchingActions searchingActions;
 
-    @Test
-    public void whenSearchingOnAnItem(){
+   @Test
+   public void whenSearchingForAnItem(){
 
-        searchingActions.openApplication();
+   searchingActions.openApplication();
 
-        searchingActions.AddItem("Jam");
+   searchingActions.addItem("Tofu");
 
+//   assertThat(searchingActions.item()).contains("Tofu");
 
-      //  assertThat(searchingActions.item()).containsAnyOf("Jam");
-    }
-
+   }
 }
